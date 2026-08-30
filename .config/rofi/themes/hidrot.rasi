@@ -1,8 +1,8 @@
 // hidrot theme - adapted with niri orange colors
 window {
-    background-color: rgba(20, 20, 20, 0.95);
+    background-color: #141414;
     border: 2px;
-    border-color: rgba(223, 97, 36, 1);
+    border-color: #df6124;
     border-radius: 6px;
     padding: 6px;
 }
@@ -12,17 +12,17 @@ mainbox {
 }
 
 inputbar {
-    background-color: rgba(32, 32, 32, 0.85);
+    background-color: #202020;
     border: 0 0 0 2px;
-    border-color: rgba(223, 97, 36, 1);
+    border-color: #df6124;
     border-radius: 6px;
     margin: 0 0 6px 0;
     padding: 4px;
 }
 
 prompt {
-    background-color: rgba(223, 97, 36, 1);
-    text-color: rgba(20, 20, 20, 0.95);
+    background-color: #df6124;
+    text-color: #141414;
     padding: 10px 14px;
     border-radius: 4px;
     margin: 2px;
@@ -30,7 +30,7 @@ prompt {
 
 entry {
     padding: 10px;
-    text-color: rgba(223, 97, 36, 1);
+    text-color: #df6124;
     placeholder-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -46,7 +46,7 @@ element {
 
 element selected {
     background-color: rgba(223, 97, 36, 0.25);
-    border-color: rgba(223, 97, 36, 1);
+    border-color: #df6124;
 }
 
 element-text {
@@ -54,5 +54,5 @@ element-text {
 }
 
 element-text selected {
-    text-color: rgba(223, 97, 36, 1);
+    text-color: #df6124;
 }
