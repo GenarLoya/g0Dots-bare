@@ -1,43 +1,53 @@
-// Global
+// App drawer theme
+@import "~/.config/rofi/config/general"
+
 * {
-    background-color: transparent;
-    text-color: rgba(255, 255, 255, 1);
-    font: "JetBrainsMono Nerd Font 11";
+  orange: #df6124;
 }
 
-// Window
 window {
-    fullscreen: true;
-    background-color: rgba(20, 20, 20, 0.9);
+  fullscreen: true;
+  background-color: rgba(20, 20, 20, 0.9);
 }
 
-// Main Box
 mainbox {
   padding: 10%;
 }
 
-// Input Bar
 inputbar {
   background-color: rgba(32,32,32,0.85);
-  children: ["prompt", "entry"];
+  border: 2px 0 0 0;
+  border-color: @orange;
   border-radius: 5px;
   margin: 0 30%;
   padding: 0.5em;
 }
+
 entry {
   placeholder: "Search:";
   placeholder-color: rgba(255,255,255,0.5);
 }
 
-// List View
 listview {
   columns: 1;
   scrollbar: false;
+  padding: 20px 25%;
 }
+
 element {
   border-radius: 5px;
   padding: 0.5em;
+  children: [element-icon, element-text];
 }
-element.selected {
+
+element-icon {
+  size: 1.2em;
+  vertical-align: 0.5;
+  margin: 0 10px;
+}
+
+element selected {
+  border: 2px;
+  border-color: @orange;
   background-color: rgba(32,32,32,0.85);
 }
