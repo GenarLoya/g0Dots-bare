@@ -37,7 +37,6 @@ listview {
   fixed-columns: true;
   layout: horizontal;
 }
-
 element {
   border-radius: 5px;
   orientation: vertical;
@@ -45,16 +44,13 @@ element {
   children: [element-icon, element-text];
   spacing: 0.5em;
 }
-
 element-icon {
   size: 2em;
 }
-
 element-text {
   highlight: none;
   horizontal-align: 0.5;
 }
-
 element.selected {
   background-color: rgba(32,32,32,0.85);
 }
