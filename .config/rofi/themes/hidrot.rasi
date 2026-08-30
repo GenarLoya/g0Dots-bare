@@ -5,54 +5,68 @@
   fg0: #e6e9ef;
   fg1: #b0b0b0;
   orange: #df6124;
-  orange-trans: #df612480;
+  orange-trans: #df612415;
 }
 
 window {
-  background-color: #141414;
-  border: 2px;
-  border-color: rgba(223, 97, 36, 0.5);
-  border-radius: 6px;
-  padding: 6px;
+  fullscreen: true;
+  background-color: rgba(20, 20, 20, 0.9);
+  border: 0;
+  border-radius: 0;
+  padding: 0;
 }
 
 mainbox {
   children: [inputbar, listview];
+  padding: 10%;
+  spacing: 4em;
 }
 
 inputbar {
-  background-color: rgba(223, 97, 36, 0.2);
-  border: 0 0 0 2px;
-  border-color: #df6124;
-  border-radius: 6px;
-  margin: 0 0 6px 0;
+  background-color: rgba(32,32,32,0.85);
+  children: [prompt, entry];
+  border-radius: 5px;
+  margin: 0 30%;
+  padding: 0.9em;
+  spacing: 0.5em;
+}
+
+prompt {
+  padding: 0 0.5em 0 0;
+  text-color: #df6124;
 }
 
 entry {
-  padding: 10px;
-  text-color: #df6124;
-}
-
-listview {
-  lines: 10;
-}
-
-element {
-  border: 0 0 0 2px;
-  border-color: transparent;
-  border-radius: 6px;
-  padding: 10px;
-}
-
-element selected {
-  background-color: rgba(223, 97, 36, 0.2);
-  border-color: #df6124;
-}
-
-element-text {
+  placeholder: "Search:";
+  placeholder-color: rgba(255,255,255,0.5);
   text-color: #e6e9ef;
 }
 
-element-text selected {
-  text-color: #df6124;
+listview {
+  columns: 8;
+  fixed-columns: true;
+  layout: horizontal;
+  lines: 0;
+}
+
+element {
+  border-radius: 5px;
+  orientation: vertical;
+  padding: 2em;
+  children: [element-icon, element-text];
+  spacing: 0.5em;
+}
+
+element selected {
+  background-color: rgba(32,32,32,0.85);
+}
+
+element-icon {
+  size: 2em;
+}
+
+element-text {
+  highlight: none;
+  horizontal-align: 0.5;
+  text-color: #e6e9ef;
 }
