@@ -3,6 +3,7 @@
 
 * {
   orange: #df6124;
+  text-color: @orange;
 }
 
 window {
