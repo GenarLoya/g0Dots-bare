@@ -4,6 +4,7 @@
 
 -- Load modules
 require("modules.env")
+require("modules.cursor")
 require("modules.animations")
 require("modules.keybinds")
 require("modules.windowrules")
@@ -50,7 +51,7 @@ hl.config({
 
     cursor = {
         invisible              = false,
-        sync_gsettings_theme  = true,
+        sync_gsettings_theme  = false,
         no_hardware_cursors    = 2,
         no_break_fs_vrr        = 2,
         inactive_timeout       = 333,
