@@ -160,9 +160,6 @@ hl.gesture({
 --------------------------------
 
 -- https://wiki.hypr.land/Configuring/Basics/Autostart/
--- Uncomment and customize below for autostart apps
--- hl.on("hyprland.start", function()
---     hl.exec_cmd("waybar &")
---     hl.exec_cmd("hyprpaper &")
---     hl.exec_cmd("dunst &")
--- end)
+hl.on("hyprland.start", function()
+    hl.exec_cmd("waybar -c ~/.config/waybar/config.jsonc -s ~/.config/waybar/style.css")
+end)
