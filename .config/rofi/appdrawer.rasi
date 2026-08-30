@@ -6,4 +6,4 @@ configuration {
     icon-theme: "Papirus";
 }
 
-@theme "~/.config/rofi/themes/hidrot.rasi"
+@theme "~/.config/rofi/themes/appdrawer.rasi"
