@@ -1,3 +1,7 @@
+---
+description: Commands for managing dotfiles using a bare git repository (dot command wrapper)
+---
+
 # Dotfiles Management
 
 ## Comando dot

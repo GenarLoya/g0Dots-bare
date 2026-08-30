@@ -2,7 +2,7 @@
   "components": {
     "editor": {
       "enabled": true,
-      "style": "opencode-copy-friendly",
+      "style": "opencode",
       "colorSource": "terminal",
       "borderColorMode": "static",
       "modelLabel": "id",
@@ -10,7 +10,7 @@
       "styles": {
         "opencode": {
           "metadataFormat": "$model  $provider(  $thinking)",
-          "completionMenu": "palette"
+          "completionMenu": "native"
         },
         "opencode-copy-friendly": {
           "metadataFormat": "$model  $provider(  $thinking)",
