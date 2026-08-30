@@ -1,0 +1,141 @@
+{
+  "language_models": {
+    "openai_compatible": {
+      "Minimax": {
+        "api_url": "https://api.minimax.io/v1",
+        "available_models": [
+          {
+            "name": "MiniMax-M2.7",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+              "interleaved_reasoning": false,
+            },
+          },
+        ],
+      },
+    },
+  },
+  "cli_default_open_behavior": "new_window",
+  "icon_theme": {
+    "mode": "light",
+    "light": "Colored Zed Icons Theme Dark",
+    "dark": "Colored Zed Icons Theme Dark",
+  },
+  "debugger": {
+    "dock": "left",
+  },
+  "git_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "context_servers": {
+    "yaak": {
+      "enabled": true,
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "http://127.0.0.1:64343/mcp"],
+    },
+  },
+  "edit_predictions": {
+    "mode": "subtle",
+  },
+  "diagnostics": {
+    "inline": {
+      "update_debounce_ms": 250,
+      "enabled": true,
+    },
+  },
+  "agent_servers": {
+    "opencode": {
+      "type": "registry",
+    },
+  },
+  "agent": {
+    "dock": "right",
+    "default_profile": "write",
+    "terminal_init_command": "pi",
+    "default_model": {
+      "provider": "Minimax",
+      "model": "MiniMax-M2.7",
+    },
+    "model_parameters": [],
+  },
+  "terminal": {
+    "env": {
+      "LC_ALL": "en_US.UTF-8",
+      "LANG": "en_US.UTF-8"
+    },
+    "shell": {
+      "program": "fish"
+    },
+    "font_family": "JetBrainsMonoNL Nerd Font Mono",
+    "line_height": {
+      "custom": 1.0,
+    },
+    "dock": "right",
+    "cursor_shape": "underline",
+    "blinking": "on",
+  },
+  "project_panel": {
+    "dock": "left",
+    "sticky_scroll": false,
+    "auto_fold_dirs": false,
+  },
+  "base_keymap": "VSCode",
+  "tab_bar": {
+    "show": false,
+    "show_tab_bar_buttons": false,
+  },
+  "relative_line_numbers": "enabled",
+  "gutter": {
+    "line_numbers": true,
+    "runnables": true,
+    "folds": false,
+  },
+  "minimap": {
+    "show": "never",
+  },
+  "scrollbar": {
+    "axes": {
+      "horizontal": false,
+      "vertical": false,
+    },
+  },
+  "cursor_shape": "underline",
+  "cursor_blink": true,
+  "autosave": "on_focus_change",
+  "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
+  "file_types": {
+    "json": ["*.excalidraw", "*.excalidrawlib"],
+    "dotenv": [".env*"],
+    "javascript": ["*.dbclient-js"],
+    "javascriptreact": ["*.jsx"],
+    "scala": ["*.scala"],
+    "markdown": ["*.mdx", ".md"],
+  },
+  "use_on_type_format": true,
+  "indent_guides": {
+    "enabled": false,
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 13,
+  "window_decorations": "server",
+  "theme": {
+    "mode": "dark",
+    "light": "Gruvbox Dark",
+    "dark": "Everforest Dark Hard (blur)",
+  },
+  "theme_overrides": {
+    "Ayu Mirage": {
+      "background": "#3b414dcc",
+    },
+  },
+}
