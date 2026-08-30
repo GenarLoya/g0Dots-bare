@@ -1,2 +1,5 @@
+theme = Rose Pine Moon
 font-family = JetBrainsMono Nerd Font Mono
 font-size = 13
+window-padding-x = 5
+window-padding-y = 10
