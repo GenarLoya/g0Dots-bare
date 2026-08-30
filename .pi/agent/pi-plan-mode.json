@@ -1,0 +1,14 @@
+{
+  "thinkingLevel": "inherit",
+  "defaultPlanTools": ["read", "bash", "grep", "find", "ls", "ask_user"],
+  "implementationPlanRetention": "clear-on-start",
+  "defaultPlanExportPath": "PLAN.md",
+  "safeSubcommands": {
+    "git": ["rev-parse", "blame", "status", "log", "diff", "branch"],
+    "gh": ["pr view", "issue list"],
+    "kubectl": ["get", "apply"],
+    "npm": ["run inspect-custom"],
+    "npx": ["ctx7@latest"]
+  },
+  "toggleShortcut": "ctrl+alt+p"
+}

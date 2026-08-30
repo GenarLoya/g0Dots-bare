@@ -1,0 +1,23 @@
+{
+  "enabled": true,
+  "settingsLanguage": "zh",
+  "style": "open-tui",
+  "footerSegments": {
+    "cwd": true,
+    "sessionName": true,
+    "context": true,
+    "tokens": true,
+    "cost": true,
+    "timer": true,
+    "extensionStatuses": false
+  },
+  "telemetry": {
+    "enabled": true,
+    "tps": true,
+    "ttft": true,
+    "duration": true,
+    "tokens": true,
+    "stalls": true,
+    "cost": true
+  }
+}
