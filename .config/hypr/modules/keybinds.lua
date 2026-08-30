@@ -21,8 +21,8 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(programs.fileManager))
 -- Toggle float
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 
--- Launcher
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(programs.menu))
+-- Launcher (app drawer)
+hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(programs.menu))
 
 -- Powermenu
 hl.bind(mainMod .. " + SHIFT + ESCAPE", hl.dsp.exec_cmd("~/.config/rofi/scripts/rofi-powermenu"))
