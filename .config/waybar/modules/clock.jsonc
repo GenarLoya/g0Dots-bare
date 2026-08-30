@@ -1,0 +1,6 @@
+{
+  "clock": {
+    "interval": 1,
+    "format": "<span color='#df6124'>TIME </span> {:%Y-%m-%d | %H:%M:%S}",
+  },
+}
