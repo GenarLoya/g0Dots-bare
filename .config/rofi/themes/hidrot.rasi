@@ -1,18 +1,28 @@
-// hidrot theme - niri colors
+// hidrot theme - rose-pine colors
 * {
-  bg0: #202020;
-  bg1: #202020;
-  bg2: #303030;
-  fg0: #e6e9ef;
-  fg1: #b0b0b0;
-  orange: #df6124;
-  orange-trans: #df612425;
+  bg0: #191724;
+  bg1: #26233a;
+  fg0: #e0def4;
+  fg1: #908caa;
+
+  red: #eb6f92;
+  red-trans: #eb6f9215;
+  green: #f6c177;
+  green-trans: #f6c17715;
+  yellow: #ebbcba;
+  yellow-trans: #ebbcba15;
+  blue: #31748f;
+  blue-trans: #31748f15;
+  purple: #c4a7e7;
+  purple-trans: #c4a7e715;
+  aqua: #9ccfd8;
+  aqua-trans: #9ccfd815;
 }
 
 window {
-  background-color: @bg0;
+  background-color: rgba(25, 23, 36, 1);
   border: 2px;
-  border-color: @orange;
+  border-color: rgba(38, 35, 58, 1);
   border-radius: 6px;
   padding: 6px;
 }
@@ -22,39 +32,43 @@ mainbox {
 }
 
 inputbar {
-  background-color: @bg1;
-  border: 0 0 0 2px;
-  border-color: @orange;
-  border-radius: 6px;
   margin: 0 0 6px 0;
 }
 
 entry {
   padding: 10px;
-  text-color: @orange;
-  placeholder-color: @fg1;
+  text-color: rgba(224, 222, 244, 1);
 }
 
 listview {
   lines: 10;
+  scrollbar: true;
+}
+
+scrollbar {
+  background-color: rgba(38, 35, 58, 1);
+  border-radius: 6px;
+  handle-color: rgba(224, 222, 244, 1);
+  handle-width: 6px;
+  margin: 0 0 0 6px;
 }
 
 element {
+  border: 2px;
   border-radius: 6px;
   padding: 10px;
-  background-color: @bg0;
+  background-color: rgba(25, 23, 36, 1);
 }
 
 element selected {
-  border: 0 0 0 2px;
-  background-color: @orange-trans;
-  border-color: @orange;
+  background-color: rgba(38, 35, 58, 1);
+  border-color: rgba(144, 140, 170, 1);
 }
 
 element-text {
-  text-color: @fg0;
+  text-color: rgba(144, 140, 170, 1);
 }
 
 element-text selected {
-  text-color: @orange;
+  text-color: rgba(224, 222, 244, 1);
 }
