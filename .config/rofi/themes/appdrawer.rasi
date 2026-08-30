@@ -2,7 +2,7 @@
 @import "~/.config/rofi/config/general"
 
 * {
-  orange: #ff9944;
+  orange: #df6124;
   text-color: @orange;
 }
 
@@ -17,12 +17,16 @@ mainbox {
 
 inputbar {
   background-color: rgba(32,32,32,0.85);
-  border: 0 0 0 2px;
-  border-color: @orange;
   border-radius: 5px;
   margin: 0 30%;
   padding: 0.5em;
   text-color: white;
+}
+
+prompt {
+  border: 0 0 0 3px;
+  padding: 0 20px 0 10px;
+  border-color: @orange;
 }
 
 entry {
@@ -46,10 +50,19 @@ element-icon {
   size: 1.2em;
   vertical-align: 0.5;
   margin: 0 10px;
+  padding: 0 20px 0 10px;
+  border: 0 0 0 3px;
+}
+
+element-icon selected {
+  border-color: @orange;
+}
+
+element-text {
+  text-color: white;
 }
 
 element selected {
   border: 2px;
-  border-color: @orange;
   background-color: rgba(32,32,32,0.85);
 }
