@@ -28,6 +28,9 @@ hl.bind(mainMod .. " + SHIFT + ESCAPE", hl.dsp.exec_cmd("~/.config/rofi/scripts/
 -- Pseudo mode
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 
+-- Fullscreen (maximize)
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle", mode = "maximized" }))
+
 -- Toggle split (dwindle)
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 
