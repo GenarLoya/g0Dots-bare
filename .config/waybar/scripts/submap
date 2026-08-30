@@ -1,9 +1,0 @@
-#!/bin/bash
-
-submap=$(hyprctl -j activewindow | jq -r '.submap')
-
-if [ -z "$submap" ] || [ "$submap" = "null" ]; then
-  echo "{}" # módulo vacío
-else
-  echo "{\"text\": \"$submap\", \"class\": \"$submap\"}"
-fi

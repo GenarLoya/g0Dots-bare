@@ -1,3 +1,0 @@
-# Gitignore for Hyprland config
-# Ignore personal environment variables
-modules/env.lua
