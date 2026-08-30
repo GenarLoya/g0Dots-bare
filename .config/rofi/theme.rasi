@@ -1,0 +1,3 @@
+@import "config/general"
+@import "colorscheme/niri"
+@import "themes/hidrot"

@@ -1,0 +1,48 @@
+window {
+  background-color: @bg0;
+  border: 2px;
+  border-color: @orange;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+mainbox {
+  children: [inputbar, listview];
+}
+
+inputbar {
+  background-color: @bg1;
+  border: 0 0 0 2px;
+  border-color: @orange;
+  border-radius: 6px;
+  margin: 0 0 6px 0;
+}
+
+entry {
+  padding: 10px;
+  text-color: @orange;
+  placeholder-color: @fg1;
+}
+
+listview {
+  lines: 10;
+}
+
+element {
+  border: 0 0 0 2px;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+element selected {
+  background-color: @orange-trans;
+  border-color: @orange;
+}
+
+element-text {
+  text-color: @fg0;
+}
+
+element-text selected {
+  text-color: @orange;
+}
