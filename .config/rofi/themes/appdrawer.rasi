@@ -14,7 +14,6 @@ window {
 // Main Box
 mainbox {
   padding: 10%;
-  spacing: 4em;
 }
 
 // Input Bar
@@ -23,34 +22,21 @@ inputbar {
   children: ["prompt", "entry"];
   border-radius: 5px;
   margin: 0 30%;
-  padding: 0.9em;
-  spacing: 0.5em;
+  padding: 0.5em;
 }
 entry {
   placeholder: "Search:";
   placeholder-color: rgba(255,255,255,0.5);
 }
 
-// Grid View
+// List View
 listview {
-  columns: 8;
-  fixed-columns: false;
-  layout: horizontal;
-  lines: 0;
+  columns: 1;
+  scrollbar: false;
 }
 element {
   border-radius: 5px;
-  orientation: vertical;
-  padding: 2em;
-  children: [element-icon, element-text];
-  spacing: 0.5em;
-}
-element-icon {
-  size: 2em;
-}
-element-text {
-  highlight: none;
-  horizontal-align: 0.5;
+  padding: 0.5em;
 }
 element.selected {
   background-color: rgba(32,32,32,0.85);
