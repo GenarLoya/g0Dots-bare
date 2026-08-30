@@ -34,8 +34,9 @@ entry {
 // Grid View
 listview {
   columns: 8;
-  fixed-columns: true;
+  fixed-columns: false;
   layout: horizontal;
+  lines: 0;
 }
 element {
   border-radius: 5px;
