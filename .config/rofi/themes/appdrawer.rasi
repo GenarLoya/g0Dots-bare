@@ -2,7 +2,7 @@
 @import "~/.config/rofi/config/general"
 
 * {
-  orange: #df6124;
+  orange: #ff9944;
   text-color: @orange;
 }
 
