@@ -1,86 +1,58 @@
 // hidrot theme - adapted with niri orange colors
-* {
-    bg0:          rgba(20, 20, 20, 0.95);
-    bg1:          rgba(32, 32, 32, 0.85);
-    orange:       #df6124;
-    orange-trans: rgba(223, 97, 36, 0.25);
-    orange-dim:  rgba(223, 97, 36, 0.6);
-    fg0:          rgba(255, 255, 255, 0.9);
-    fg1:          rgba(255, 255, 255, 0.5);
-    gray:         #505050;
-    spacing:      8px;
-}
-
 window {
-    background-color: @bg0;
-    border: 2px solid @orange;
+    background-color: rgba(20, 20, 20, 0.95);
+    border: 2px;
+    border-color: rgba(223, 97, 36, 1);
     border-radius: 6px;
     padding: 6px;
 }
 
 mainbox {
     children: [inputbar, listview];
-    spacing: @spacing;
 }
 
 inputbar {
-    background-color: @bg1;
-    border: 0 0 0 2px solid @orange;
+    background-color: rgba(32, 32, 32, 0.85);
+    border: 0 0 0 2px;
+    border-color: rgba(223, 97, 36, 1);
     border-radius: 6px;
     margin: 0 0 6px 0;
     padding: 4px;
 }
 
 prompt {
-    background-color: @orange;
-    text-color: @bg0;
+    background-color: rgba(223, 97, 36, 1);
+    text-color: rgba(20, 20, 20, 0.95);
     padding: 10px 14px;
     border-radius: 4px;
     margin: 2px;
 }
 
-textbox-prompt-colon {
-    expand: false;
-    str: ":";
-}
-
 entry {
     padding: 10px;
-    text-color: @orange;
-    placeholder-color: @fg1;
+    text-color: rgba(223, 97, 36, 1);
+    placeholder-color: rgba(255, 255, 255, 0.5);
 }
 
 listview {
     lines: 10;
-    fixed-height: false;
 }
 
 element {
-    border: 0 0 0 2px solid transparent;
+    border: 0 0 0 2px;
     border-radius: 6px;
     padding: 10px;
-    spacing: @spacing;
-}
-
-element normal {
-    text-color: @fg0;
 }
 
 element selected {
-    background-color: @orange-trans;
-    border-color: @orange;
-    text-color: @orange;
-}
-
-element alternate {
-    text-color: @fg1;
+    background-color: rgba(223, 97, 36, 0.25);
+    border-color: rgba(223, 97, 36, 1);
 }
 
 element-text {
-    text-color: inherit;
+    text-color: rgba(255, 255, 255, 0.9);
 }
 
-element-icon {
-    size: 1.2em;
-    text-color: inherit;
+element-text selected {
+    text-color: rgba(223, 97, 36, 1);
 }
