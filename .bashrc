@@ -16,4 +16,4 @@ test -s ~/.alias && . ~/.alias || true
 export PATH="/home/genarold/.local/share/pi-node/node-v22.23.2-linux-x64/bin:$PATH"
 
 # Dotfiles bare repo alias
-alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME
+alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
