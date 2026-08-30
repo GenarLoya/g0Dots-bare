@@ -1,0 +1,9 @@
+configuration {
+    modes: [drun];
+    drun-display-format: "{name}";
+    matching: "fuzzy";
+    sort: true;
+    icon-theme: "Papirus";
+}
+
+@theme "~/.config/rofi/themes/appdrawer.rasi"
