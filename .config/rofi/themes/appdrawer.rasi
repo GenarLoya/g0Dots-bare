@@ -33,16 +33,10 @@ entry {
 listview {
   columns: 1;
   scrollbar: false;
-  padding: 20px 25%;
 }
 element {
   border-radius: 5px;
   padding: 0.5em;
-  children: [element-icon, element-text];
-}
-element-icon {
-  size: 1.2em;
-  vertical-align: 0.5;
 }
 element.selected {
   background-color: rgba(32,32,32,0.85);
