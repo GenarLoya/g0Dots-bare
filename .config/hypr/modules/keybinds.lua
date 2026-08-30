@@ -24,6 +24,9 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 -- Launcher
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(programs.menu))
 
+-- Powermenu
+hl.bind(mainMod .. " + SHIFT + ESCAPE", hl.dsp.exec_cmd("~/.config/rofi/scripts/rofi-powermenu"))
+
 -- Pseudo mode
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 

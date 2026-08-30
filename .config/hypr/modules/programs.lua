@@ -3,7 +3,7 @@
 
 local terminal    = "ghostty"
 local fileManager = "dolphin"
-local menu        = "wofi"
+local menu        = "rofi -show drun -theme ~/.config/rofi/appdrawer.rasi"
 
 return {
     terminal    = terminal,

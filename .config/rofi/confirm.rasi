@@ -1,0 +1,9 @@
+configuration {
+    modes: [dmenu];
+    show-icons: true;
+    matching: "fuzzy";
+    sort: true;
+    icon-theme: "Papirus";
+}
+
+@theme "~/.config/rofi/themes/confirm.rasi"

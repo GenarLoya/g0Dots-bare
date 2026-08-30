@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCREENSHOTS_DIR="$HOME/Pictures/Screenshots"
+mkdir -p "$SCREENSHOTS_DIR"
+
+timestamp=$(date +'%Y-%m-%d %H-%M-%S')
+tmpfile="/tmp/screenshot_$$.png"
+final="$SCREENSHOTS_DIR/Screenshot from $timestamp.png"
+
+monitor=$(hyprctl -j monitors | jq -r '.[] | select(.focused == true) | .name')
+
+case "${1:-region}" in
+    region)
+        grim -g "$(slurp)" "$tmpfile"
+        ;;
+    window)
+        grim -g "$(slurp -o)" "$tmpfile"
+        ;;
+    monitor-focused)
+        grim -o "$monitor" "$tmpfile"
+        ;;
+    monitor-all)
+        grim -o eDP-1 "$tmpfile" 2>/dev/null || grim -o "$monitor" "$tmpfile"
+        ;;
+esac
+
+wl-copy < "$tmpfile"
+mv "$tmpfile" "$final"

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+clipboard=$(clipvault list | cut -f2- | rofi -dmenu -show-icons -i -theme ~/.config/rofi/clipboard.rasi -p "󰅌 ")
+
+if [ -n "$clipboard" ]; then
+    echo "$clipboard" | wl-copy
+fi

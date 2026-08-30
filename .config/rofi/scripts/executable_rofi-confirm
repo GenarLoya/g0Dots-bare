@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+question="$1"
+shift
+yes_command="$@"
+
+options="Yes\nCancel"
+chosen="$(echo -e "$options" | rofi -dmenu -show-icons -i -theme ~/.config/rofi/confirm.rasi -p "$question")"
+
+case "$chosen" in
+  "Yes")
+    eval "$yes_command"
+    ;;
+  *)
+    exit 0
+    ;;
+esac
