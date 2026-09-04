@@ -54,11 +54,15 @@
     },
   },
   "agent_servers": {
+    "pi-acp": {
+      "type": "registry"
+    },
     "opencode": {
       "type": "registry",
     },
   },
   "agent": {
+    "sidebar_side": "right",
     "dock": "right",
     "default_profile": "write",
     "terminal_init_command": "pi",

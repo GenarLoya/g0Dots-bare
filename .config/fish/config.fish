@@ -10,3 +10,6 @@ set -gx PATH /home/genarold/.local/share/pi-node/node-v22.23.2-linux-x64/bin $PA
 
 # Dotfiles bare repo alias
 alias dot '/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+
+# Pi
+fish_add_path "/home/genarold/.local/share/pi-node/node-v22.23.2-linux-x64/bin"
