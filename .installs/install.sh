@@ -60,7 +60,7 @@ lxappearance
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-gtk
 xdg-utils
-xorg-x11-utilsEOF
+EOF
 )
 
 # -------------------------
@@ -101,14 +101,6 @@ fi
 # -------------------------
 echo ""
 echo "⚙️  Configuraciones..."
-
-# XDG dirs
-xdg-user-dirs-update
-
-# Copiar dot al installs
-mkdir -p "$INSTALLS"
-cp "$INSTALLS/install.sh" "$INSTALLS/install.sh.bak" 2>/dev/null || true
-cp "$HOME/.local/bin/dot" "$INSTALLS/" 2>/dev/null || true
 
 echo ""
 echo "=========================================="
