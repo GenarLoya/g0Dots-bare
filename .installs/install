@@ -1,0 +1,32 @@
+#!/bin/bash
+
+set -e
+
+DOTFILES="$HOME/.dotfiles"
+LOCAL_BIN="$HOME/.local/bin"
+DOT_ALIAS="$LOCAL_BIN/dot"
+
+# Crear ~/.local/bin si no existe
+mkdir -p "$LOCAL_BIN"
+
+# Crear el script dot
+cat > "$DOT_ALIAS" << 'EOF'
+#!/bin/bash
+git --git-dir="$HOME/.dotfiles" --work-tree="$HOME" "$@"
+EOF
+
+# Dar permisos de ejecución
+chmod +x "$DOT_ALIAS"
+
+# Agregar al PATH si no está
+if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
+    echo 'export PATH="$HOME/.local/bin:$PATH"' >> "$HOME/.bashrc"
+    echo 'export PATH="$HOME/.local/bin:$PATH"' >> "$HOME/.config/fish/config.fish"
+    echo "PATH actualizado en .bashrc y fish config"
+fi
+
+# Mensaje
+echo "✓ dot alias instalado en $DOT_ALIAS"
+echo "  Usa: dot status, dot add, dot commit, dot push"
+echo ""
+echo "Recuerda recargar tu shell: source ~/.bashrc"
