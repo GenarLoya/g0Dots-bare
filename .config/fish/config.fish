@@ -5,8 +5,8 @@ set -g fish_greeting ''
 
 starship init fish | source
 
-# Pi node PATH
-set -gx PATH /home/genarold/.local/share/pi-node/node-v22.23.2-linux-x64/bin $PATH
+# Add .local/bin to PATH
+fish_add_path -g $HOME/.local/bin
 
 # Pi
 fish_add_path "/home/genarold/.local/share/pi-node/node-v22.23.2-linux-x64/bin"
