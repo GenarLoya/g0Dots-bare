@@ -13,4 +13,4 @@ fi
 
 RANDOM_WALL="${WALLPAPERS[$((RANDOM % ${#WALLPAPERS[@]}))]}"
 echo "Setting random wallpaper: $RANDOM_WALL"
-awww img --transition-type grow --transition-pos top-left --transition-step 15 "$RANDOM_WALL"
+awww img --transition-type random "$RANDOM_WALL"
