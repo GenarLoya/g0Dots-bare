@@ -20,7 +20,14 @@ echo ""
 # 1. Verificar paru
 # -------------------------
 if ! command -v paru &> /dev/null; then
-    echo "⚠️  paru no está instalado. Instalando..."
+    echo "⚠️  paru no está instalado."
+    read -p "¿Quieres instalarlo? [y/N]: " -n 1 -r
+    echo
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+        echo "Saliendo..."
+        exit 1
+    fi
+    echo "📦 Instalando paru..."
     sudo pacman -S --needed base-devel git
     git clone https://aur.archlinux.org/paru.git /tmp/paru
     cd /tmp/paru && makepkg -si
