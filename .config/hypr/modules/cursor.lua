@@ -1,0 +1,5 @@
+hl.env("XCURSOR_THEME", "Banana")
+hl.env("XCURSOR_SIZE", "24")
+hl.env("HYPRCURSOR_THEME", "Banana")
+hl.env("HYPRCURSOR_SIZE", "24")
+hl.env("WLR_NO_HARDWARE_CURSORS", "1")
