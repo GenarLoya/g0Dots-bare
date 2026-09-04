@@ -47,35 +47,20 @@ rofi
 fish
 ghostty
 awww
-python-pillow
-python-requests
-btop
-neofetch
-vim
-nano
+fastfetch
 micro
-git
 starship
 playerctl
 brightnessctl
- NetworkManager
 wireplumber
- polkit-gnome
- bibata-cursor-themes
- bibata-cursor-bin
- lxappearance
- nwg-look
+polkit-gnome
+bibata-cursor-themes
+bibata-cursor-bin
+lxappearance
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-gtk
-xdg-user-dirs
 xdg-utils
-xorg-xprop
-xorg-xkill
-xorg-xsetroot
-wofi
-swww
- swaync
-EOF
+xorg-x11-utilsEOF
 )
 
 # -------------------------
