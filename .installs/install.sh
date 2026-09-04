@@ -54,9 +54,6 @@ playerctl
 brightnessctl
 wireplumber
 polkit-gnome
-bibata-cursor-themes
-bibata-cursor-bin
-lxappearance
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-gtk
 xdg-utils
