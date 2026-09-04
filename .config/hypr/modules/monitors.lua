@@ -1,0 +1,13 @@
+------------------
+---- MONITORS ----
+------------------
+
+-- https://wiki.hypr.land/Configuring/Basics/Monitors/
+-- Auto-detect monitors (default behavior)
+-- Uncomment and modify below for manual monitor configuration
+-- hl.monitor({
+--     output   = "HDMI-A-1",
+--     mode     = "1920x1080@60",
+--     position = "0x0",
+--     scale    = 1,
+-- })
