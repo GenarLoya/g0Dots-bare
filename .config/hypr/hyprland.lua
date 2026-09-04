@@ -9,6 +9,7 @@ require("modules.animations")
 require("modules.keybinds")
 require("modules.windowrules")
 require("modules.workspace_rules")
+require("modules.theme")
 
 ------------------
 ---- MONITORS ----
@@ -30,65 +31,6 @@ require("modules.workspace_rules")
 
 -- https://wiki.hypr.land/Configuring/Advanced-and-Cool/Permissions/
 -- Cursor settings are in hl.config() below
-
------------------------
----- LOOK AND FEEL ----
------------------------
-
-hl.config({
-    general = {
-        gaps_in  = 5,
-        gaps_out = 5,
-        border_size = 2,
-        col = {
-            active_border   = "#3080FF",
-            inactive_border = "#505050",
-        },
-        resize_on_border = false,
-        allow_tearing   = false,
-        layout          = "dwindle",
-    },
-
-    cursor = {
-        invisible              = false,
-        sync_gsettings_theme  = false,
-        no_hardware_cursors    = 2,
-        no_break_fs_vrr        = 2,
-        inactive_timeout       = 333,
-        persistent_warps       = true,
-        warp_on_toggle_special = 1,
-        enable_hyprcursor      = true,
-        hide_on_touch          = true,
-        hide_on_tablet         = true,
-        use_cpu_buffer         = 2,
-        warp_back_after_non_mouse_input = true,
-    },
-
-    decoration = {
-        rounding       = 5,
-        rounding_power = 2,
-        active_opacity   = 1.0,
-        inactive_opacity = 1.0,
-
-        shadow = {
-            enabled      = true,
-            range        = 4,
-            render_power = 3,
-            color        = 0xee1a1a1a,
-        },
-
-        blur = {
-            enabled  = true,
-            size     = 3,
-            passes   = 1,
-            vibrancy = 0.1696,
-        },
-    },
-
-    animations = {
-        enabled = true,
-    },
-})
 
 -- Dwindle layout
 hl.config({

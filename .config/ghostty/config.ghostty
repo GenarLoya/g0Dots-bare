@@ -1,8 +1,53 @@
-theme = Rose Pine Moon
-background = #2d2a2e
+# Everforest Dark Hard theme
+theme = none
+background = #1e2427
+foreground = #d3c6a6
+
+# Black / Bright Black (0/8)
+palette0 = #1e2427
+palette8 = #475258
+
+# Red / Bright Red (1/9)
+palette1 = #e67e58
+palette9 = #e67e58
+
+# Green / Bright Green (2/10)
+palette2 = #a7c080
+palette10 = #a7c080
+
+# Yellow / Bright Yellow (3/11)
+palette3 = #dbbc7f
+palette11 = #dbbc7f
+
+# Blue / Bright Blue (4/12)
+palette4 = #7fb4ca
+palette12 = #7fb4ca
+
+# Magenta / Bright Magenta (5/13)
+palette5 = #9fbec7
+palette13 = #9fbec7
+
+# Cyan / Bright Cyan (6/14)
+palette6 = #83c7b3
+palette14 = #83c7b3
+
+# White / Bright White (7/15)
+palette7 = #d3c6a6
+palette15 = #d3c6a6
+
+# Cursor
+cursor-color = #d3c6a6
+
+# Selection
+selection-background = #2e383c
+selection-foreground = #d3c6a6
+
+# Font
 font-family = JetBrainsMono Nerd Font Mono
 font-size = 13
+
+# Window
 window-padding-x = 5
 window-padding-y = 10
-background-opacity = 0.9
+background-opacity = 0.8
 background-blur = true
