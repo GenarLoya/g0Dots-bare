@@ -18,9 +18,9 @@ PanelWindow {
     anchors.verticalCenter: parent.verticalCenter
   }
 
-  RightPill {
-    anchors.right: parent.right
-    anchors.rightMargin: 12
-    anchors.verticalCenter: parent.verticalCenter
-  }
+  // RightPill {
+  //   anchors.right: parent.right
+  //   anchors.rightMargin: 12
+  //   anchors.verticalCenter: parent.verticalCenter
+  // }
 }
