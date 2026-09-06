@@ -13,17 +13,19 @@ hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 -- File manager
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(programs.fileManager))
 
--- Toggle float
-hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-
 -- Launcher (app drawer)
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(programs.menu))
 
 -- Window switcher
 hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd(programs.window))
 
+-- Clipboard history (clipvault picker con preview)
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(programs.clipboard))
+
 -- Powermenu
-hl.bind(mainMod .. " + SHIFT + ESCAPE", hl.dsp.exec_cmd("~/.config/rofi/scripts/rofi-powermenu"))
+-- Toggle del menú de sesión de Quickshell vía IPC (target "session"
+-- definido en widgets/Session.qml).
+hl.bind(mainMod .. " + SHIFT + ESCAPE", hl.dsp.exec_cmd("qs ipc call session toggle"))
 
 -- Pseudo mode
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
