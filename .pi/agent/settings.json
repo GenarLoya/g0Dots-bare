@@ -1,10 +1,9 @@
 {
-  "lastChangelogVersion": "0.84.4",
+  "lastChangelogVersion": "0.85.1",
   "theme": "dark",
   "packages": [
     "npm:@mrclrchtr/supi-ask-user",
-    "npm:pi-zentui",
-    "npm:@narumitw/pi-plan-mode"
+    "npm:pi-zentui"
   ],
   "defaultProvider": "minimax",
   "defaultModel": "MiniMax-M3"
