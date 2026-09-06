@@ -40,6 +40,8 @@ Scope {
 
         exclusionMode: ExclusionMode.Ignore
 
+        visible: server.trackedNotifications.values.length > 0
+
         ColumnLayout {
             id: column
             width: parent.width

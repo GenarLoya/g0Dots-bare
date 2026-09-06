@@ -1,5 +1,6 @@
 import QtQuick
 import "../config.js" as Config
+import qs.widgets
 
 Rectangle {
   id: pill
@@ -14,6 +15,6 @@ Rectangle {
     anchors.centerIn: parent
     spacing: 8
 
-
+    Session {}
   }
 }

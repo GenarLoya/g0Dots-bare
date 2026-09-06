@@ -32,5 +32,6 @@ Rectangle {
     Clock {
       anchors.verticalCenter: parent.verticalCenter
     }
+
   }
 }
