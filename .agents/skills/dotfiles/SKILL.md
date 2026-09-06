@@ -1,4 +1,5 @@
 ---
+name: dotfiles-bare-repo
 description: Commands for managing dotfiles using a bare git repository (dot command wrapper)
 ---
 
