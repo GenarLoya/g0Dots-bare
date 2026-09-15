@@ -1,13 +1,29 @@
+// Rosé Pine (https://rosepinetheme.com/palette) — solo las 15 keys
+// oficiales de la paleta. Los widgets deben usar estos nombres
+// exactos (no alias como "bg" / "fg" / "cyan").
 const colors = {
-  bg:     "#2d353b",
-  bgDark: "#232a2e",
-  fg:     "#d3c6aa",
-  muted:  "#859289",
-  cyan:   "#83c092",
-  purple: "#d699b6",
-  red:    "#e67e80",
-  yellow: "#dbbc7f",
-  blue:   "#7fbbb3",
+  // backgrounds
+  base:    "#191724",
+  surface: "#1f1d2e",
+  overlay: "#26233a",
+
+  // text
+  muted:   "#6e6a86",
+  subtle:  "#908caa",
+  text:    "#e0def4",
+
+  // accents
+  love:    "#eb6f92",
+  gold:    "#f6c177",
+  rose:    "#ebbcba",
+  pine:    "#31748f",
+  foam:    "#9ccfd8",
+  iris:    "#c4a7e7",
+
+  // highlights
+  highlightLow:  "#21202e",
+  highlightMed:  "#403d52",
+  highlightHigh: "#524f67",
 }
 
 const bar = {

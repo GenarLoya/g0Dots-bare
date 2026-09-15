@@ -66,7 +66,7 @@ Item {
         id: powerIcon
         anchors.centerIn: parent
         text: ""
-        color: Config.colors.fg
+        color: Config.colors.text
         font.family: Config.bar.fontFamily
         font.pixelSize: 14
 

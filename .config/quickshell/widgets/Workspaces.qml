@@ -29,7 +29,7 @@ Item {
                 height: 10
                 radius: height / 2
 
-                color: isActive ? Config.colors.cyan : (isEmpty ? Config.colors.muted : Config.colors.blue)
+                color: isActive ? Config.colors.rose : (isEmpty ? Config.colors.pine : Config.colors.highlightHigh)
 
                 Behavior on width { NumberAnimation { duration: 150 } }
 

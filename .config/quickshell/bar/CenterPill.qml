@@ -8,7 +8,7 @@ Rectangle {
   id: pill
   height: 28
   radius: height / 2
-  color: Config.colors.bg
+  color: Config.colors.base
 
   implicitWidth: contentRow.implicitWidth + 20
 
@@ -16,6 +16,17 @@ Rectangle {
     id: contentRow
     anchors.centerIn: parent
     spacing: 8
+
+    AppLauncher {
+      anchors.verticalCenter: parent.verticalCenter
+    }
+
+    Rectangle {
+      anchors.verticalCenter: parent.verticalCenter
+      width: 1
+      height: 14
+      color: Config.colors.muted
+    }
 
     Workspaces {
       anchors.verticalCenter: parent.verticalCenter

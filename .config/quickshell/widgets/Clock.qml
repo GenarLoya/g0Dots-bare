@@ -8,7 +8,7 @@ Row {
 
   // Fecha
   Text {
-    color: Config.colors.fg
+    color: Config.colors.text
     font.family: Config.bar.fontFamily
     font.pixelSize: 13
 
@@ -30,7 +30,7 @@ Row {
 
   // Hora con segundos
   Text {
-    color: Config.colors.fg
+    color: Config.colors.text
     font.family: Config.bar.fontFamily
     font.pixelSize: 13
     font.weight: Font.Medium

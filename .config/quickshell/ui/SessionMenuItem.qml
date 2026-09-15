@@ -35,6 +35,8 @@ Rectangle {
 
     // --- Props configurables ---
     property string colorName: "cyan"     // clave en Config.colors
+    property string focusedTextColorName: "text"
+    property string unFocusedTextColorName: "text"
     property var    action                // array de args (execDetached)
                                           // o función () => void
     property bool   requireConfirm: false
@@ -77,10 +79,10 @@ Rectangle {
     radius: 6
     antialiasing: true
     color: rootItem.confirming
-        ? Config.colors.red
+        ? Config.colors.love
         : (mouse.containsMouse || rootItem.activeFocus
             ? Config.colors[rootItem.colorName]
-            : Config.colors.bg)
+            : Config.colors.base)
 
     // --- Visual: texto ---
     Text {
@@ -91,8 +93,8 @@ Rectangle {
         color: (rootItem.confirming
                 || mouse.containsMouse
                 || rootItem.activeFocus)
-            ? Config.colors.bg
-            : Config.colors[rootItem.colorName]
+            ? Config.colors[rootItem.focusedTextColorName]
+            : Config.colors[rootItem.unFocusedTextColorName]
         font.family: Config.bar.fontFamily
         font.pixelSize: 13
     }

@@ -46,7 +46,7 @@ Scope {
             anchors.fill: parent
             radius: 6
             antialiasing: true
-            color: Config.colors.bg
+            color: Config.colors.base
         }
 
         ColumnLayout {
@@ -74,7 +74,7 @@ Scope {
                 Layout.fillWidth: true
                 label: "Lock"
                 icon: ""
-                colorName: "cyan"
+                colorName: "surface"
                 action: ["loginctl", "lock-session"]
                 requireConfirm: true
                 navUp: shutdownItem     // wrap
@@ -88,7 +88,7 @@ Scope {
                 Layout.fillWidth: true
                 label: "Logout"
                 icon: ""
-                colorName: "cyan"
+                colorName: "surface"
                 action: ["loginctl", "terminate-user", Quickshell.env("USER")]
                 requireConfirm: true
                 navUp: lockItem
@@ -102,8 +102,8 @@ Scope {
                 Layout.fillWidth: true
                 label: "Suspend"
                 icon: ""
-                colorName: "cyan"
-                action: ["systemctl", "suspend"]
+                colorName: "surface"
+                action: ["sh", "-c", "sleep 2 && systemctl suspend"]
                 requireConfirm: false
                 navUp: logoutItem
                 navDown: rebootItem
@@ -116,7 +116,7 @@ Scope {
                 Layout.fillWidth: true
                 label: "Reboot"
                 icon: ""
-                colorName: "cyan"
+                colorName: "surface"
                 action: ["systemctl", "reboot"]
                 requireConfirm: true
                 navUp: suspendItem
@@ -130,7 +130,8 @@ Scope {
                 Layout.fillWidth: true
                 label: "Shutdown"
                 icon: ""
-                colorName: "red"
+                colorName: "love"
+                focusedTextColorName: "surface"
                 action: ["systemctl", "poweroff"]
                 requireConfirm: true
                 navUp: rebootItem

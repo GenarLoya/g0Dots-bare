@@ -6,7 +6,7 @@ Rectangle {
   id: pill
   height: 28
   radius: height / 2
-  color: Config.colors.bg
+  color: Config.colors.base
 
   implicitWidth: contentRow.implicitWidth + 20
 
