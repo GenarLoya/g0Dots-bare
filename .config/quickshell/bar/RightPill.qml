@@ -15,6 +15,7 @@ Rectangle {
     anchors.centerIn: parent
     spacing: 8
 
+    Clipboard {}
     Session {}
   }
 }

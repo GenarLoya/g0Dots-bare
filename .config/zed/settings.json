@@ -11,7 +11,7 @@
             "max_completion_tokens": 200000,
             "capabilities": {
               "tools": true,
-              "images": false,
+              "images": true,
               "parallel_tool_calls": false,
               "prompt_cache_key": false,
               "chat_completions": true,

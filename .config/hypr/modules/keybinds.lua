@@ -23,8 +23,12 @@ hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("qs ipc call launcher toggle"))
 -- Window switcher: antes rofi vía programs.window; ya no se usa.
 -- Hyprland tiene Alt-Tab nativo (`cyclenext`), lo dejo libre.
 
--- Clipboard history (clipvault picker con preview)
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(programs.clipboard))
+-- Clipboard history (popup de Quickshell con preview)
+-- Toggle del clipboard picker de Quickshell vía IPC (target "clipboard"
+-- definido en widgets/Clipboard.qml). Antes apuntaba a programs.clipboard
+-- (clipvault-pick.sh con rofi) — ya no se usa, se puede borrar esa
+-- entrada de modules/programs.lua si se quiere.
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("qs ipc call clipboard toggle"))
 
 -- Powermenu
 -- Toggle del menú de sesión de Quickshell vía IPC (target "session"
