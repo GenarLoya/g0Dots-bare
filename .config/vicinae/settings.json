@@ -56,6 +56,22 @@
                "enabled": false
             }
          }
+      },
+      "scripts": {
+         "preferences": {
+            "customDirs": [
+               "/home/genarold/.config/scripts"
+            ]
+         }
+      },
+      "snippets": {
+         "preferences": {
+            "enabled": true,
+            "undo": true,
+            "layout": "",
+            "prePasteDelay": "0",
+            "keyDelay": "2"
+         }
       }
    }
 }

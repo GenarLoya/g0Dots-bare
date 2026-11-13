@@ -25,7 +25,6 @@
   ],
 
   "modules-center": [
-    "custom/clipboard",
     "clock"
   ],
 

@@ -148,12 +148,9 @@ button:hover {
 #battery,
 #memory,
 #cpu {
-  border-radius: 3px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   margin: 1px 2px 2px 2px;
   padding: 0 6px;
   background-color: @bg;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
   transition-property: background-color;
   transition-duration: .5s;
 }
@@ -163,29 +160,17 @@ button:hover {
   min-width: 45px;
 }
 
-/* --- Zona derecha: colores de la paleta Aura --- */
-#bluetooth {
-  color: @blue;
-}
-
-#network {
-  color: @green;
-}
-
-#pulseaudio {
-  color: @orange;
+/* --- Zona derecha: texto en blanco (sin colores por módulo) --- */
+#bluetooth,
+#network,
+#pulseaudio,
+#memory,
+#cpu {
+  color: @fg;
 }
 
 #battery {
   color: @blue;
-}
-
-#memory {
-  color: @red;
-}
-
-#cpu {
-  color: @pink;
 }
 
 /* Texto auxiliar atenuado (ej. "kB/s") */
