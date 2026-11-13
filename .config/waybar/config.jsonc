@@ -46,7 +46,7 @@
 
   // Reloj + fecha (formato de la referencia).
   "clock": {
-    "format": " {:%H:%M 󰭧 %Y %b, %d %a}",
+    "format": " {:%H:%M 󰭧 %Y, %d %B - %A}",
     "tooltip-format": "<span>{calendar}</span>",
     "calendar": {
       "mode": "month",
