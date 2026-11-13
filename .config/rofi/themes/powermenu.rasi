@@ -1,0 +1,26 @@
+/* Powermenu (menú de sesión) — Rosé Pine
+ * Usado por:
+ *   • Waybar  → custom/powermenu
+ *   • Hyprland → SUPER + SHIFT + ESCAPE (modules/keybinds.lua)
+ *
+ * Uso: rofi -dmenu -p "Sesión" -theme ~/.config/rofi/themes/powermenu.rasi
+ */
+
+@theme "~/.config/rofi/themes/base.rasi"
+
+configuration {
+    modi: "dmenu";
+    display-dmenu: "Sesión";
+    dmenu-display-format: "{}";
+}
+
+window {
+    width: 320px;
+    location: "center";
+    anchor: "center";
+}
+
+mainbox {
+    spacing: 10px;
+    children: [ inputbar, listview ];
+}

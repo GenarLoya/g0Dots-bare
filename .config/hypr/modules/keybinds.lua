@@ -14,26 +14,22 @@ hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(programs.fileManager))
 
 -- Launcher (app drawer)
--- Toggle del app launcher de Quickshell vía IPC (target "launcher"
--- definido en widgets/AppLauncher.qml). Antes apuntaba a rofi vía
--- programs.menu; ya no se usa — se puede borrar esa entrada de
--- modules/programs.lua si se quiere.
-hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("qs ipc call launcher toggle"))
+-- Antes: `qs ipc call launcher toggle` (Quickshell). Ahora: rofi en modo
+-- drun con el tema Rosé Pine de ~/.config/rofi/themes/appdrawer.rasi.
+hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("rofi -show drun -theme ~/.config/rofi/themes/appdrawer.rasi"))
 
 -- Window switcher: antes rofi vía programs.window; ya no se usa.
 -- Hyprland tiene Alt-Tab nativo (`cyclenext`), lo dejo libre.
 
--- Clipboard history (popup de Quickshell con preview)
--- Toggle del clipboard picker de Quickshell vía IPC (target "clipboard"
--- definido en widgets/Clipboard.qml). Antes apuntaba a programs.clipboard
--- (clipvault-pick.sh con rofi) — ya no se usa, se puede borrar esa
--- entrada de modules/programs.lua si se quiere.
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("qs ipc call clipboard toggle"))
+-- Clipboard history (clipvault + rofi)
+-- Antes: `qs ipc call clipboard toggle` (Quickshell). Ahora se usa el
+-- picker de clipvault, que ya estaba en modules/programs.lua.
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(programs.clipboard))
 
 -- Powermenu
--- Toggle del menú de sesión de Quickshell vía IPC (target "session"
--- definido en widgets/Session.qml).
-hl.bind(mainMod .. " + SHIFT + ESCAPE", hl.dsp.exec_cmd("qs ipc call session toggle"))
+-- Antes: `qs ipc call session toggle` (Quickshell). Ahora: script de rofi
+-- con las acciones de sesión (cerrar sesión / suspender / reiniciar / apagar).
+hl.bind(mainMod .. " + SHIFT + ESCAPE", hl.dsp.exec_cmd(programs.powermenu))
 
 -- Pseudo mode
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())

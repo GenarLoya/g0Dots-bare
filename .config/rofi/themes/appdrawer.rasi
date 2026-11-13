@@ -1,0 +1,31 @@
+/* Launcher de aplicaciones — Rosé Pine
+ * Usado por:
+ *   • Waybar  → custom/launcher
+ *   • Hyprland → SUPER + space (modules/keybinds.lua)
+ *
+ * Uso: rofi -show drun -theme ~/.config/rofi/themes/appdrawer.rasi
+ */
+
+@theme "~/.config/rofi/themes/base.rasi"
+
+configuration {
+    modi: "drun";
+    display-drun: "Aplicaciones";
+    drun-display-format: "{name}";
+    matching: "fuzzy";
+    sort: true;
+    icon-theme: "Papirus";
+    drun-icon-display-mode: 3;
+}
+
+window {
+    width: 46%;
+    height: 60%;
+    location: "center";
+    anchor: "center";
+}
+
+mainbox {
+    spacing: 10px;
+    children: [ inputbar, listview ];
+}

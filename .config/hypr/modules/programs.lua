@@ -4,15 +4,17 @@
 local terminal    = "ghostty"
 local fileManager = "dolphin"
 local clipboard   = "~/.config/scripts/clipvault-pick.sh"
+local powermenu   = "~/.config/scripts/powermenu.sh"
+local launcher    = "rofi -show drun -theme ~/.config/rofi/themes/appdrawer.rasi"
 
--- menu (antiguo rofi drun launcher) ya no se usa — el app launcher
--- ahora es Quickshell vía IPC: target "launcher" en widgets/AppLauncher.qml,
--- bind en modules/keybinds.lua: mainMod + space → "qs ipc call launcher toggle".
--- window (antiguo rofi window switcher) tampoco — Hyprland ya hace
--- Alt-Tab nativo; si querés un overview custom hay que armarlo aparte.
+-- El launcher y el powermenu dejaron de vivir en Quickshell: ahora son
+-- rofi (launcher) y un script propio con rofi (powermenu). El bind del
+-- launcher está literal en modules/keybinds.lua.
 
 return {
     terminal    = terminal,
     fileManager = fileManager,
     clipboard   = clipboard,
+    powermenu   = powermenu,
+    launcher    = launcher,
 }

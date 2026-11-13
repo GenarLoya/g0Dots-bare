@@ -1,0 +1,139 @@
+/* Waybar — Rosé Pine (https://rosepinetheme.com/palette)
+ * Mismos colores que el antiguo bar de Quickshell (config.js).
+ */
+
+@define-color base       #191724;
+@define-color surface    #1f1d2e;
+@define-color overlay    #26233a;
+@define-color muted      #6e6a86;
+@define-color subtle     #908caa;
+@define-color text       #e0def4;
+@define-color love       #eb6f92;
+@define-color gold       #f6c177;
+@define-color rose       #ebbcba;
+@define-color pine       #31748f;
+@define-color foam       #9ccfd8;
+@define-color iris       #c4a7e7;
+@define-color hl-low     #21202e;
+@define-color hl-med     #403d52;
+@define-color hl-high    #524f67;
+
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  padding: 0;
+}
+
+/* Barra flotante con esquinas redondeadas. */
+window#waybar {
+  background-color: @base;
+  border: 1px solid @hl-low;
+  border-radius: 12px;
+}
+
+/* Separadores verticales entre grupos (estilo de la referencia). */
+#custom-launcher,
+#clock,
+#workspaces,
+#custom-clipboard {
+  border-right: 1px solid @hl-high;
+  margin-right: 8px;
+  padding-right: 8px;
+}
+
+/* Reloj */
+#clock {
+  color: @text;
+  font-weight: 600;
+}
+
+/* Workspaces: el activo es una caja clara con texto oscuro. */
+#workspaces button {
+  color: @subtle;
+  background-color: transparent;
+  border-radius: 6px;
+  padding: 2px 8px;
+  margin: 0 2px;
+  min-width: 22px;
+  min-height: 20px;
+}
+
+#workspaces button.active {
+  color: @base;
+  background-color: @text;
+  font-weight: 700;
+}
+
+#workspaces button.urgent {
+  color: @base;
+  background-color: @love;
+}
+
+/* Título de la ventana */
+#window {
+  color: @muted;
+  padding-right: 8px;
+}
+
+/* Botones custom: launcher, clipboard, powermenu */
+#custom-launcher,
+#custom-clipboard,
+#custom-powermenu {
+  color: @text;
+  padding: 0 8px;
+}
+
+#custom-launcher:hover,
+#custom-clipboard:hover,
+#custom-powermenu:hover {
+  color: @love;
+}
+
+/* Volumen */
+#pulseaudio {
+  color: @foam;
+  padding: 0 8px;
+}
+
+/* Bluetooth */
+#bluetooth {
+  color: @iris;
+  padding: 0 8px;
+}
+
+/* Batería */
+#battery {
+  color: @gold;
+  padding: 0 8px;
+}
+
+#battery.warning {
+  color: @gold;
+}
+
+#battery.critical {
+  color: @love;
+}
+
+/* System tray */
+#tray {
+  padding: 0 4px;
+}
+
+#tray icon {
+  color: @text;
+}
+
+/* Tooltips */
+tooltip {
+  background-color: @overlay;
+  border: 1px solid @hl-high;
+  border-radius: 8px;
+  color: @text;
+  font-family: "JetBrainsMono Nerd Font";
+  padding: 4px 8px;
+}

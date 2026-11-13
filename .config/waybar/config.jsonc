@@ -1,0 +1,123 @@
+// Waybar — barra para Hyprland
+// Estilo: Rosé Pine (misma paleta que el antiguo bar de Quickshell).
+// Se lanza desde modules/autostart.lua de Hyprland:
+//
+//   waybar -c ~/.config/waybar/config.jsonc -s ~/.config/waybar/style.css
+//
+{
+  "layer": "top",
+  "position": "top",
+  "height": 34,
+
+  // Márgenes para que la barra quede flotante (esquinas redondeadas).
+  "margin-top": 6,
+  "margin-left": 12,
+  "margin-right": 12,
+
+  "spacing": 0,
+  "reload_style_on_change": true,
+
+  // Izquierda: launcher, reloj, workspaces y título de la ventana.
+  "modules-left": ["custom/launcher", "clock", "hyprland/workspaces", "window"],
+  "modules-center": [],
+  // Derecha: clipboard, volumen, bluetooth, batería, tray y powermenu.
+  "modules-right": [
+    "custom/clipboard",
+    "pulseaudio",
+    "bluetooth",
+    "battery",
+    "tray",
+    "custom/powermenu"
+  ],
+
+  // Reloj + fecha (estilo "00:34 - Mon, 16").
+  "clock": {
+    "interval": 1,
+    "format": "{:%H:%M <span color='#6e6a86'>-</span> %a, %d}",
+    "tooltip-format": "<big>{:%H:%M:%S}</big>\n<small>{:%A, %d de %B}</small>"
+  },
+
+  // Workspaces de Hyprland. El activo se pinta como caja clara (ver style.css).
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": false,
+    "format": "{id}",
+    "on-click": "hyprctl dispatch workspace {id}",
+    "tooltip-format": "{id}"
+  },
+
+  // Título de la ventana activa.
+  "window": {
+    "max-length": 40,
+    "format": "{title}",
+    "separate-icons": false
+  },
+
+  // Launcher de aplicaciones (rofi drun).
+  "custom/launcher": {
+    "format": "\uf00b",
+    "on-click": "rofi -show drun -theme /home/genarold/.config/rofi/themes/appdrawer.rasi",
+    "tooltip": true
+  },
+
+  // Historial de clipboard (clipvault + rofi).
+  "custom/clipboard": {
+    "format": "\uf0ea",
+    "on-click": "/home/genarold/.config/scripts/clipvault-pick.sh",
+    "tooltip": true
+  },
+
+  // Menú de sesión (rofi).
+  "custom/powermenu": {
+    "format": "\uf011",
+    "on-click": "/home/genarold/.config/scripts/powermenu.sh",
+    "tooltip": true
+  },
+
+  // Volumen.
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "\uf0581 {volume}%",
+    "format-icons": {
+      "default": ["\uf057c", "\uf057d", "\uf057e"],
+      "headphone": ["\uf057c", "\uf057d", "\uf057e"],
+      "speaker": ["\uf057c", "\uf057d", "\uf057e"],
+      "hands-free": ["\uf057c", "\uf057d", "\uf057e"],
+      "headphone-bluetooth": ["\uf057c", "\uf057d", "\uf057e"]
+    },
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+    "tooltip": true
+  },
+
+  // Bluetooth.
+  "bluetooth": {
+    "format": "\uf04b2",
+    "format-connected": "\uf04b2",
+    "format-disabled": "\uf04b2",
+    "tooltip-format": "{device_alias}\n{status}",
+    "on-click": "bluetoothctl power toggle"
+  },
+
+  // Batería.
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-charging": "{icon} {capacity}%",
+    "format-plugged": "{icon} {capacity}%",
+    "format-icons": {
+      "charged": "\uf0084",
+      "discharging": "\uf0080",
+      "full": "\uf0079",
+      "empty": "\uf007c"
+    },
+    "tooltip": true
+  },
+
+  // System tray.
+  "tray": {
+    "icon-size": 16,
+    "spacing": 6,
+    "tooltip": true
+  }
+}

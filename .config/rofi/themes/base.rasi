@@ -1,0 +1,79 @@
+/* Base — Rosé Pine (https://rosepinetheme.com/palette)
+ * Colores compartidos por appdrawer.rasi y powermenu.rasi.
+ */
+
+* {
+    bg:            #191724;
+    bg-alt:        #1f1d2e;
+    fg:            #e0def4;
+    fg-alt:        #908caa;
+    fg-dim:        #6e6a86;
+    accent:        #eb6f92;
+    accent-alt:    #c4a7e7;
+    gold:          #f6c177;
+    foam:          #9ccfd8;
+    urgent:        #eb6f92;
+    selected-bg:   #26233a;
+    selected-fg:   #e0def4;
+    line:          #403d52;
+
+    font: "JetBrainsMono Nerd Font 12";
+    border-radius: 10px;
+}
+
+window {
+    background-color: @bg;
+    border: 1px;
+    border-color: @line;
+    padding: 12px;
+}
+
+inputbar {
+    background-color: @bg-alt;
+    text-color: @fg;
+    padding: 8px;
+    spacing: 8px;
+    border: 1px;
+    border-color: @line;
+    border-radius: 8px;
+    selected: true;
+    prompt-colour: @accent;
+}
+
+message {
+    background-color: transparent;
+    text-color: @fg-alt;
+    margin: 8px 0 0 0;
+    padding: 0 8px;
+}
+
+listview {
+    background-color: transparent;
+    lines: 10;
+    columns: 1;
+    spacing: 4px;
+    scrollbar: true;
+    fixed-height: false;
+}
+
+element {
+    background-color: transparent;
+    text-color: @fg;
+    padding: 8px;
+    spacing: 10px;
+}
+
+element selected {
+    background-color: @selected-bg;
+    text-color: @accent;
+    border-radius: 8px;
+}
+
+element-icon {
+    size: 24px;
+    vertical-align: 0.5;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
