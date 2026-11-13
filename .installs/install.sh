@@ -44,8 +44,13 @@ paru -S --sudoloop - < <(cat << 'EOF'
 hyprland
 waybar
 rofi
+satty
+grim
+slurp
+wl-clipboard
 fish
 ghostty
+nautilus
 awww
 fastfetch
 micro
@@ -53,10 +58,16 @@ starship
 playerctl
 brightnessctl
 wireplumber
+bluez
+bluez-utils
+networkmanager
 polkit-gnome
+ttf-jetbrains-mono-nerd
+noto-fonts-emoji
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-gtk
 xdg-utils
+vicinae-bin
 EOF
 )
 
@@ -99,10 +110,23 @@ fi
 echo ""
 echo "⚙️  Configuraciones..."
 
+# Vicinae (launcher + historial de clipboard): directorio de temas.
+# El tema aura.toml viene incluido en los dotfiles.
+mkdir -p "$HOME/.local/share/vicinae/themes"
+
+# Servicios necesarios para bluetooth (waybar) y red (NetworkManager).
+sudo systemctl enable --now bluetooth.service 2>/dev/null || true
+sudo systemctl enable --now NetworkManager.service 2>/dev/null || true
+
 echo ""
 echo "=========================================="
 echo "  ✅ Instalación completa!"
 echo "=========================================="
+echo ""
+echo "Notas:"
+echo "  - Vicinae arranca solo desde ~/.config/hypr/modules/autostart.lua"
+echo "    (o manualmente con: vicinae server)"
+echo "  - Rofi se usa solo para el powermenu (SUPER + SHIFT + ESCAPE)"
 echo ""
 echo "Ejecuta para recargar shell:"
 echo "  source ~/.bashrc  # bash"

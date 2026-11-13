@@ -65,7 +65,7 @@
       },
       "default_config_options": {
         "mode": "build",
-        "model": "minimax-coding-plan/MiniMax-M3"
+        "model": "opencode/big-pickle"
       },
       "type": "registry",
     },

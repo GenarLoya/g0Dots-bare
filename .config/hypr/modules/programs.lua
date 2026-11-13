@@ -2,7 +2,7 @@
 -- Set programs that you use
 
 local terminal    = "ghostty"
-local fileManager = "dolphin"
+local fileManager = "nautilus"
 local clipboard   = "vicinae 'vicinae://launch/clipboard/history?toggle=true'"
 local powermenu   = "~/.config/scripts/powermenu.sh"
 local launcher    = "vicinae toggle"
