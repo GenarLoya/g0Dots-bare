@@ -17,3 +17,4 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Pi
 export PATH="/home/genarold/.local/share/pi-node/node-v22.23.2-linux-x64/bin:$PATH"
+export PATH="$HOME/android-tools/platform-tools:$PATH"

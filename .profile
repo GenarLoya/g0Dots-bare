@@ -23,3 +23,4 @@ test -z "$PROFILEREAD" && . /etc/profile || true
 #    /usr/bin/fortune
 #    echo
 #fi
+export PATH="$HOME/android-tools/platform-tools:$PATH"

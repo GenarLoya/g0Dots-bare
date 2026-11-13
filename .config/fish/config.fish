@@ -10,3 +10,6 @@ fish_add_path -g $HOME/.local/bin
 
 # Pi
 fish_add_path "/home/genarold/.local/share/pi-node/node-v22.23.2-linux-x64/bin"
+
+# opencode
+fish_add_path /home/genarold/.opencode/bin
