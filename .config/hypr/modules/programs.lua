@@ -3,13 +3,12 @@
 
 local terminal    = "ghostty"
 local fileManager = "dolphin"
-local clipboard   = "~/.config/scripts/clipvault-pick.sh"
+local clipboard   = "vicinae 'vicinae://launch/clipboard/history?toggle=true'"
 local powermenu   = "~/.config/scripts/powermenu.sh"
-local launcher    = "rofi -show drun -theme ~/.config/rofi/themes/appdrawer.rasi"
+local launcher    = "vicinae toggle"
 
--- El launcher y el powermenu dejaron de vivir en Quickshell: ahora son
--- rofi (launcher) y un script propio con rofi (powermenu). El bind del
--- launcher está literal en modules/keybinds.lua.
+-- El launcher y el historial del clipboard los lleva Vicinae (nativo Wayland).
+-- El powermenu sigue con rofi vía script propio.
 
 return {
     terminal    = terminal,

@@ -13,18 +13,18 @@ hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 -- File manager
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(programs.fileManager))
 
--- Launcher (app drawer)
--- Antes: `qs ipc call launcher toggle` (Quickshell). Ahora: rofi en modo
--- drun con el tema Rosé Pine de ~/.config/rofi/themes/appdrawer.rasi.
-hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("rofi -show drun -theme ~/.config/rofi/themes/appdrawer.rasi"))
+-- Launcher (app drawer + command palette)
+-- Antes: rofi en modo drun con el tema Rosé Pine de ~/.config/rofi/themes/appdrawer.rasi.
+-- Ahora: Vicinae (launcher nativo + historial de clipboard integrado).
+hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("vicinae toggle"))
 
 -- Window switcher: antes rofi vía programs.window; ya no se usa.
 -- Hyprland tiene Alt-Tab nativo (`cyclenext`), lo dejo libre.
 
--- Clipboard history (clipvault + rofi)
--- Antes: `qs ipc call clipboard toggle` (Quickshell). Ahora se usa el
--- picker de clipvault, que ya estaba en modules/programs.lua.
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(programs.clipboard))
+-- Historial del clipboard (Vicinae, Wayland nativo vía data-control-v1)
+-- Antes: picker de clipvault + rofi.
+-- El parámetro ?toggle=true hace que el atajo cierre la ventana si ya está abierta.
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("vicinae 'vicinae://launch/clipboard/history?toggle=true'"))
 
 -- Powermenu
 -- Antes: `qs ipc call session toggle` (Quickshell). Ahora: script de rofi

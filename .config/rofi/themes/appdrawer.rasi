@@ -1,4 +1,4 @@
-/* Launcher de aplicaciones — Rosé Pine
+/* Launcher de aplicaciones — Aura Theme + estructura g0Dots
  * Usado por:
  *   • Waybar  → custom/launcher
  *   • Hyprland → SUPER + space (modules/keybinds.lua)
@@ -14,18 +14,13 @@ configuration {
     drun-display-format: "{name}";
     matching: "fuzzy";
     sort: true;
-    icon-theme: "Papirus";
+    show-icons: true;
+    /* Papirus no está instalado: rofi usa el tema por defecto (Adwaita). */
+    icon-theme: "hicolor";
     drun-icon-display-mode: 3;
 }
 
 window {
-    width: 46%;
+    width: 440px;
     height: 60%;
-    location: "center";
-    anchor: "center";
-}
-
-mainbox {
-    spacing: 10px;
-    children: [ inputbar, listview ];
 }

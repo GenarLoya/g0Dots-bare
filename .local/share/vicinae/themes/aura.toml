@@ -1,0 +1,22 @@
+[meta]
+name = "Aura"
+description = "Aura Theme - daltonmenezes/aura-theme"
+variant = "dark"
+inherits = "vicinae-dark"
+
+[colors.core]
+background = "#15141b"
+foreground = "#edecee"
+secondary_background = "#1b1a23"
+border = "#3d375e7f"
+accent = "#a277ff"
+
+[colors.accents]
+blue = "#82e2ff"
+green = "#61ffca"
+magenta = "#f694ff"
+orange = "#ffca85"
+purple = "#a277ff"
+red = "#ff6767"
+yellow = "#ffca85"
+cyan = "#61ffca"

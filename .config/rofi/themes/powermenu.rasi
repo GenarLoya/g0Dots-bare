@@ -1,4 +1,4 @@
-/* Powermenu (menú de sesión) — Rosé Pine
+/* Powermenu (menú de sesión) — Aura Theme + estructura g0Dots
  * Usado por:
  *   • Waybar  → custom/powermenu
  *   • Hyprland → SUPER + SHIFT + ESCAPE (modules/keybinds.lua)
@@ -12,15 +12,9 @@ configuration {
     modi: "dmenu";
     display-dmenu: "Sesión";
     dmenu-display-format: "{}";
+    show-icons: false;
 }
 
 window {
     width: 320px;
-    location: "center";
-    anchor: "center";
-}
-
-mainbox {
-    spacing: 10px;
-    children: [ inputbar, listview ];
 }
