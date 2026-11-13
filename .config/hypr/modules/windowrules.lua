@@ -30,6 +30,15 @@ hl.window_rule({
     float = true,
 })
 
+-- Satty (anotador de capturas): flotante, centrado y al 70% de la pantalla
+hl.window_rule({
+    name   = "satty-float-center",
+    match  = { class = "com.gabm.satty" },
+    float  = true,
+    center = true,
+    size   = { "monitor_w * 0.7", "monitor_h * 0.7" },
+})
+
 -- Picture-in-Picture window
 hl.window_rule({
     name        = "pip-window",

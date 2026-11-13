@@ -10,6 +10,7 @@
 
 {
    "$schema": "https://vicinae.com/schemas/config.json",
+   "encrypt_sensitive_data": true,
    "global_shortcuts": {
       "toggle": ""
    },
@@ -22,7 +23,7 @@
    },
    "theme": {
       "dark": {
-         "name": "evergarden-fall",
+         "name": "evergarden-winter",
          "icon_theme": "Banana"
       }
    },
@@ -31,10 +32,29 @@
       "opacity": 0.6,
       "floating_status_bar": true
    },
+   "favorites": [
+      "applications:helium",
+      "clipboard:history"
+   ],
    "providers": {
       "@dagimg-dot/store.vicinae.wifi-commander": {
          "preferences": {
-            "network-cli-tool": "nmcli"
+            "network-cli-tool": "iwctl"
+         }
+      },
+      "ai": {
+         "preferences": {
+            "providers": {},
+            "defaultModel": "none",
+            "instructions": "",
+            "enableTools": true
+         }
+      },
+      "applications": {
+         "entrypoints": {
+            "rofi-theme-selector": {
+               "enabled": false
+            }
          }
       }
    }
