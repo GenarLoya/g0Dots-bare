@@ -58,6 +58,15 @@
       "type": "registry"
     },
     "opencode": {
+      "favorite_config_option_values": {
+        "mode": [
+          "plan"
+        ]
+      },
+      "default_config_options": {
+        "mode": "build",
+        "model": "minimax-coding-plan/MiniMax-M3"
+      },
       "type": "registry",
     },
   },
