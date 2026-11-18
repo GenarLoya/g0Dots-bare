@@ -23,6 +23,9 @@ hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("vicinae toggle"))
 -- El parámetro ?toggle=true hace que el atajo cierre la ventana si ya está abierta.
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("vicinae 'vicinae://launch/clipboard/history?toggle=true'"))
 
+-- Power menu (Vicinae)
+hl.bind(mainMod .. " + SHIFT + ESCAPE", hl.dsp.exec_cmd("vicinae 'vicinae://launch/power'"))
+
 -- Pseudo mode
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 
