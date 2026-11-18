@@ -5,7 +5,7 @@
 //          [pulseaudio][battery][memory][cpu]
 //
 // Módulos de Omarchy no disponibles aquí -> se omiten o se sustituyen
-// por equivalentes locales (launcher, clipboard, powermenu, red, cpu, memoria).
+// por equivalentes locales (launcher, clipboard, red, cpu, memoria).
 {
   "layer": "top",
   "position": "top",
@@ -76,7 +76,7 @@
     "tooltip-format": "{id}"
   },
 
-  // Lanzador de aplicaciones (rofi drun).
+  // Lanzador de aplicaciones (Vicinae).
   "custom/launcher": {
     "format": "󰣇",
     "on-click": "vicinae toggle",

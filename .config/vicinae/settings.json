@@ -50,13 +50,7 @@
             "enableTools": true
          }
       },
-      "applications": {
-         "entrypoints": {
-            "rofi-theme-selector": {
-               "enabled": false
-            }
-         }
-      },
+      "applications": {},
       "scripts": {
          "preferences": {
             "customDirs": [

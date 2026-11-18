@@ -43,7 +43,6 @@ echo "📦 Instalando dependencias..."
 paru -S --sudoloop - < <(cat << 'EOF'
 hyprland
 waybar
-rofi
 satty
 grim
 slurp
@@ -126,7 +125,6 @@ echo ""
 echo "Notas:"
 echo "  - Vicinae arranca solo desde ~/.config/hypr/modules/autostart.lua"
 echo "    (o manualmente con: vicinae server)"
-echo "  - Rofi se usa solo para el powermenu (SUPER + SHIFT + ESCAPE)"
 echo ""
 echo "Ejecuta para recargar shell:"
 echo "  source ~/.bashrc  # bash"
